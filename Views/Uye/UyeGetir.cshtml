@@ -1,0 +1,51 @@
+﻿@model MvcKutuphaneUdemy.Models.Entity.TBLUYELER
+@{
+    ViewBag.Title = "UyeGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>UyeGetir</h2>
+
+@using (Html.BeginForm("Guncelle", "Uye", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(u => u.ID)
+        @Html.TextBoxFor(u => u.ID, new { @class = "form-control" })
+
+        <br />
+        @Html.LabelFor(u => u.AD)
+        @Html.TextBoxFor(u => u.AD, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(u => u.SOYAD)
+        @Html.TextBoxFor(u => u.SOYAD, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(u => u.MAIL)
+        @Html.TextBoxFor(u => u.MAIL, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(u => u.KULLANICIADI)
+        @Html.TextBoxFor(u => u.KULLANICIADI, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(u => u.SIFRE)
+        @Html.TextBoxFor(u => u.SIFRE, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(u => u.FOTOGRAF)
+        @Html.TextBoxFor(u => u.FOTOGRAF, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(u => u.TELEFON)
+        @Html.TextBoxFor(u => u.TELEFON, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(u => u.OKUL)
+        @Html.TextBoxFor(u => u.OKUL, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <button class="btn btn-warning">Güncelle</button>
+    </div>
+}

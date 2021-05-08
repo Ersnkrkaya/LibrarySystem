@@ -1,0 +1,17 @@
+﻿@model MvcKutuphaneUdemy.Models.Entity.TBLPERSONEL
+@{
+    ViewBag.Title = "YeniPersonel";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>YeniPersonel</h2>
+
+<form class="form-group" method="post">
+    <div>
+        <label style="margin-top:15px;margin-bottom:10px;">Personel Adı</label>
+        @Html.TextBoxFor(x=>x.PERSONEL)
+    </div>
+    <div style="margin-top:15px;">
+        <button class="btn btn-info" id="Btn1">Personel Ekle</button>
+    </div>
+</form>

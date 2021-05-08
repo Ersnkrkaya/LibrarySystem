@@ -1,0 +1,27 @@
+﻿@model MvcKutuphaneUdemy.Models.Entity.TBLYAZAR
+@{
+    ViewBag.Title = "YazarEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>YazarEkle</h2>
+
+<form class="form-group" method="post">
+    <div>
+        <label style="margin-top:15px;margin-bottom:10px;">Yazar Adı</label>
+        @Html.TextBoxFor(y => y.AD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(y => y.AD)
+    </div>
+    <div>
+        <label style="margin-top:15px;margin-bottom:10px;">Yazar Soyadı</label>
+        @Html.TextBoxFor(y => y.SOYAD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(y=>y.SOYAD)
+    </div>
+    <div>
+        <label style="margin-top:15px;margin-bottom:10px;">Yazar Detay</label>
+        @Html.TextAreaFor(y => y.DETAY, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <button class="btn btn-primary">Yazar Ekle</button>
+    </div>
+</form>

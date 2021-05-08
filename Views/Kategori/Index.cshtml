@@ -1,0 +1,28 @@
+﻿@using MvcKutuphaneUdemy.Models.Entity
+@model List<TBLKATEGORI>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Kategoriler</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Kategori ID</th>
+            <th>Kategori ADI</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+    </thead>
+    @foreach(var kategori in Model) { 
+    <tr>
+        <td>@kategori.ID</td>
+        <td>@kategori.AD</td>
+        <td><a href="/Kategori/KategoriSil/@kategori.ID" class="btn btn-danger">Sil</a></td>
+        <td><a href="/Kategori/KategoriGetir/@kategori.ID" class="btn btn-success">Güncelle</a></td>
+    </tr>}
+</table>
+<a href="/Kategori/YeniKategori" class="btn btn-primary">Yeni Kategori Ekle</a>
